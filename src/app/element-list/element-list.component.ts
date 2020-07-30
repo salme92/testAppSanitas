@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetdataserviceService } from './services/getdataservice.service';
 
 @Component({
   selector: 'app-element-list',
