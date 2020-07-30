@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { GetdataserviceService } from './services/getdataservice.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { GetdataserviceService } from '../services/getdataservice.service';
 
 @Component({
   selector: 'app-element-list',
@@ -8,9 +8,16 @@ import { GetdataserviceService } from './services/getdataservice.service';
 })
 export class ElementListComponent implements OnInit {
 
-  constructor() { }
+  @Input() elementData;
+
+  constructor(private GetdataserviceService: GetdataserviceService) { }
 
   ngOnInit(): void {
+    this.elementData = this.GetdataserviceService.getElements();
+  }
+
+  errorImage(event, name): any {
+  //  event.target.src = '../assets/error-image.png';
   }
 
 }

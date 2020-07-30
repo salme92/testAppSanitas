@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+
+    .main-element {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .main-element * {
+        padding-right: 25px;
+    }
+
+}
