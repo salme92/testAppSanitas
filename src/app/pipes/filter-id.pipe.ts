@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterIdPipe implements PipeTransform {
 
-  transform(value: string, searchId: elementData) {
-    return null;
+  transform(value: string, searchId: string) {
+    console.log(value, searchId);
   }
 
 }

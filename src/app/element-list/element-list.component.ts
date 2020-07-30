@@ -8,7 +8,8 @@ import { GetdataserviceService } from '../services/getdataservice.service';
 })
 export class ElementListComponent implements OnInit {
 
-  @Input() elementData;
+  @Input() elementData: any[];
+  @Input() searchId : String ;
 
   constructor(private GetdataserviceService: GetdataserviceService) { }
 
