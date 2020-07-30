@@ -1,9 +1,9 @@
 <div>
     <h2>Filter example</h2>
-    <input class="input-filter" type="text" name="search" autocomplete="off" placeholder="&#61442;  Search ID example">
+    <input class="input-filter" type="text" name="search" [(ngModel)]="elementData" autocomplete="off" placeholder="&#61442;  Search ID example">
 </div>
 
-<div class="main" *ngFor="let element of elementData | filterId">
+<div class="main" *ngFor="let element of elementData | filterId: elementData">
     <div class="main-element">
         <p class="idElement"> ID: {{ element._id }}</p>
         <img class="elementImage" alt="image" src="{{ element.photo }}" (error)="errorImage($event, element.photo)" />
