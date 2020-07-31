@@ -10,11 +10,11 @@ import { FilterIdPipe } from './pipes/filter-id.pipe';
   declarations: [
     AppComponent,
     ElementListComponent,
-    FilterIdPipe,
-    FormsModule
+    FilterIdPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

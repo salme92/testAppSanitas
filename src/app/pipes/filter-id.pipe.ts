@@ -5,8 +5,21 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterIdPipe implements PipeTransform {
 
-  transform(value: string, searchId: string) {
-    console.log(value, searchId);
+  transform(value: any[], filterOptions): any {
+
+    let filterResult = value;
+
+    if (!filterOptions) {
+      return value;
+    }
+
+    if (filterOptions ) {
+      filterResult = filterResult.filter((value) => value.text.toString().includes(filterOptions));
+    }
+
+    return filterResult;
+
   }
+
 
 }
