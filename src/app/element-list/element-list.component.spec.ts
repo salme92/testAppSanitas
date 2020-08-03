@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { GetdataserviceService } from '../services/getdataservice.service'
 
 import { ElementListComponent } from './element-list.component';
 
@@ -19,7 +20,11 @@ describe('ElementListComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  /* Test to knows it has 4000 elements on service data */
+
+  it('should create 4000 elements on json', () => {
+    let service: GetdataserviceService = TestBed.get(GetdataserviceService);
+    let elements = service.getElements();
+    expect(elements.length).toBe(4000);
   });
 });

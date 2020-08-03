@@ -16,6 +16,9 @@ import { FilterIdPipe } from './pipes/filter-id.pipe';
     BrowserModule,
     FormsModule
   ],
+  exports: [
+    FilterIdPipe
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

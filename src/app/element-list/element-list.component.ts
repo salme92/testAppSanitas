@@ -13,12 +13,16 @@ export class ElementListComponent implements OnInit {
 
   constructor(private GetdataserviceService: GetdataserviceService) { }
 
+  /* Init data */
+
   ngOnInit(): void {
     this.elementData = this.GetdataserviceService.getElements();
   }
 
+  /* This function appears when image has error url and replace this image with another one */
+
   errorImage(event, name): any {
-  //  event.target.src = '../assets/error-image.png';
+    event.target.src = '../assets/error-image.png';
   }
 
 }
