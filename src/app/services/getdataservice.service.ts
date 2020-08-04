@@ -5,7 +5,7 @@ import { ElementsList } from '../element-list/interface-element-list'
 @Injectable({
   providedIn: 'root'
 })
-export class GetdataserviceService {
+export class getDataService {
 
   constructor() {
   }

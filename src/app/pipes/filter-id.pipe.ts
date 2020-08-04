@@ -18,7 +18,7 @@ export class FilterIdPipe implements PipeTransform {
     /* Get data and compare, transform this one like string and compare with includes it has same value between those values*/
 
     if (filterOptions ) {
-      filterResult = filterResult.filter((value) => value.text.toString().includes(filterOptions));
+      filterResult = filterResult.filter((filterResult) => filterResult.text.toString().includes(filterOptions));
     }
 
     return filterResult;

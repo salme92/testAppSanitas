@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { GetdataserviceService } from '../services/getdataservice.service'
 
 import { ElementListComponent } from './element-list.component';
 
