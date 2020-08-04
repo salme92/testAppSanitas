@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import elementData from 'src/assets/data.json';
-import { ElementsList } from '../element-list/interface-element-list'
+import { ElementsList } from '../element-list/interface-element-list';
 
 @Injectable({
   providedIn: 'root'
 })
-export class getDataService {
+export class GetDataService {
 
   constructor() {
   }
@@ -15,5 +15,4 @@ export class getDataService {
   getElements(): ElementsList[] {
     return elementData;
 }
-
 }

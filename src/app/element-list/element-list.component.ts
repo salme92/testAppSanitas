@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { getDataService } from '../services/getdataservice.service';
+import { GetDataService } from '../services/getdataservice.service';
 
 @Component({
   selector: 'app-element-list',
@@ -11,12 +11,12 @@ export class ElementListComponent implements OnInit {
   @Input() elementData;
   @Input() filterOptions;
 
-  filter_title = 'Filter Example';
+  filterTitle = 'Filter Example';
 
-  constructor(private getDataService: getDataService) { }
+  constructor(private GetDataService: GetDataService) {}
 
   ngOnInit(): void {
-    this.elementData = this.getDataService.getElements();
+    this.elementData = this.GetDataService.getElements();
   }
 
   /* This function appears when image has error url and replace this image with another one */
