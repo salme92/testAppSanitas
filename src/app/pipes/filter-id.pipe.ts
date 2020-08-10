@@ -9,15 +9,12 @@ export class FilterIdPipe implements PipeTransform {
 
     let filterResult = value;
 
-    /* If filterOptions isn't true, it returns value data with all elements */
-
     if (!filterOptions) {
       return value;
     }
 
-    /* Get data and compare, transform this one like string and compare with includes it has same value between those values*/
-
     if (filterOptions) {
+      // tslint:disable-next-line:no-shadowed-variable
       filterResult = filterResult.filter((filterResult) => filterResult.text.toString().includes(filterOptions));
     }
 

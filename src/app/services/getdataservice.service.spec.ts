@@ -13,7 +13,6 @@ describe('GetDataService', () => {
   /* Test to knows it has 4000 elements on service data */
 
   it('should create 4000 elements on json', () => {
-    const service: GetDataService = TestBed.inject(GetDataService);
     const elements = service.getElements();
     expect(elements.length).toBe(4000);
   });

@@ -6,6 +6,8 @@ import { GetDataService } from '../services/getdataservice.service';
   templateUrl: './element-list.component.html',
   styleUrls: ['./element-list.component.scss']
 })
+
+
 export class ElementListComponent implements OnInit {
 
   @Input() elementData;
@@ -13,10 +15,11 @@ export class ElementListComponent implements OnInit {
 
   filterTitle = 'Filter Example';
 
-  constructor(private GetDataService: GetDataService) {}
+
+  constructor(private dataService: GetDataService) {}
 
   ngOnInit(): void {
-    this.elementData = this.GetDataService.getElements();
+    this.elementData = this.dataService.getElements();
   }
 
   /* This function appears when image has error url and replace this image with another one */
