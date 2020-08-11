@@ -6,7 +6,7 @@
 <div class="main" *ngFor="let element of elementData | filterId: filterOptions">
     <div class="main-element">
         <p class="idElement"> {{ element.id }}</p>
-        <img class="elementImage" alt="image" src="#" (error)="errorImage($event, element.photo)" />
+        <img class="elementImage" alt="image" src="{{element.photo}}" (error)="errorImage($event, element.photo)" />
         <div class="textElement" [innerHTML]="element.text"></div>
     </div>
 </div>

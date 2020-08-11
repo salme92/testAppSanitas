@@ -1,24 +1,23 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { ElementsList } from '../element-list/interface-element-list';
 
 @Pipe({
   name: 'filterId'
 })
 export class FilterIdPipe implements PipeTransform {
 
-  transform(value: any[], filterOptions): any {
-
-    let filterResult = value;
+  transform(value: Array<ElementsList>, filterOptions): Array<ElementsList> {
 
     if (!filterOptions) {
       return value;
     }
 
+
     if (filterOptions) {
-      // tslint:disable-next-line:no-shadowed-variable
-      filterResult = filterResult.filter((filterResult) => filterResult.text.toString().includes(filterOptions));
+      const filterResult = value.filter((result = filterOptions) => result.text.toString().includes(filterOptions));
+      return filterResult;
     }
 
-    return filterResult;
 
   }
 
